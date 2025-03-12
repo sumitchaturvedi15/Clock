@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #d1427b, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background: linear-gradient(135deg, #d1427b, #feb47b);
+    }
+    50% {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    100% {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    }
+  }
+  
+  .clock {
+    text-align: center;
+    padding: 50px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    width: 500px;
+    animation: slideUp 1s bounceIn;
+  }
+  
+  /* @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  } */
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #time {
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5);
+    animation: fadeInText 1s ease-in-out;
+  }
+  
+  #date {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 15px;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+    animation: fadeInText 1.5s ease-in-out;
+  }
+  
+  #day {
+    font-size: 25px;
+    font-weight: 400;
+    color: #ddd;
+    margin-top: 8px;
+    animation: fadeInText 2s ease-in-out;
+  }
+  
+
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
